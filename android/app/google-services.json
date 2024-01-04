@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1077902068353",
+    "project_id": "flencr",
+    "storage_bucket": "flencr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077902068353:android:4f9e4abb1f35bccd495b80",
+        "android_client_info": {
+          "package_name": "com.flencrfrontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB8zeLkoGLjPRwft8VuX42SvAXLLhndGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
