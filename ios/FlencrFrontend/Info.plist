@@ -44,6 +44,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access is required so you can upload profile photos and find matches!</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
