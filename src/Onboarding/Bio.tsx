@@ -22,6 +22,7 @@ export default function Photos({navigation}: {navigation: any}) {
             className="w-full rounded-lg text-lg font-semibold text-gray-700"
             onChangeText={setBio}
             placeholder="Tell your future dates about yourself!"
+            placeholderTextColor={'#d1d5db'}
             autoFocus
             maxLength={500}
           />

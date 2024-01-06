@@ -4,26 +4,25 @@ import Instructions from './_components/Instructions';
 import ContinueBtn from './_components/ContinueBtn';
 import GradientBackground from './_components/GradientBackground';
 
-function calculateAge(date: string[]) {
-  // Reorder the date array to form a date string (YYYY-MM-DD)
-  const dateString = `${date[2]}-${date[1]}-${date[0]}`;
+function calculateAge(dateInput: string[]): number {
+  // Destructure the dateInput array to get day, month, and year
+  const [day, month, year] = dateInput;
 
-  // Create a date object from the dateString
-  const birthDate = new Date(dateString);
+  // Convert the string values to numbers
+  const birthDay = parseInt(day, 10);
+  const birthMonth = parseInt(month, 10) - 1; // Month is 0-indexed in JavaScript Date
+  const birthYear = parseInt(year, 10);
 
-  // Get today's date
+  // Create a new Date instance for today's date
   const today = new Date();
 
-  // Calculate age
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const monthDifference = today.getMonth() - birthDate.getMonth() + 1; // Adjusting month index
+  // Calculate the age
+  let age = today.getFullYear() - birthYear;
 
-  // Adjust age if this year's birthday has not occurred yet
-  if (
-    monthDifference < 0 ||
-    (monthDifference === 0 && today.getDate() < birthDate.getDate())
-  ) {
-    age--;
+  // Adjust age if the current month is before the birth month
+  // or if it's the birth month but the current day is before the birth day
+  if (today.getMonth() < birthMonth || (today.getMonth() === birthMonth && today.getDate() < birthDay)) {
+      age--;
   }
 
   return age;
@@ -125,79 +124,81 @@ function Birthday({navigation}: any) {
 
   return (
     <GradientBackground>
-        <View className="flex-1 justify-between p-4">
-          <View className="space-y-6">
-            <Instructions
-              progress={0}
-              title="Birthday"
-              info="Your age will be displayed to everyone."
-            />
+      <View className="flex-1 justify-between p-4">
+        <View className="space-y-6">
+          <Instructions
+            progress={0}
+            title="Birthday"
+            info="Your age will be displayed to everyone."
+          />
 
-            <View className="w-full space-y-14">
-              <View className="flex-row gap-x-2">
-                {date.map((val, index) => {
-                  if (index === 2) {
-                    return (
-                      <TextInput
-                        key={index}
-                        className="px-8 py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700"
-                        keyboardType="number-pad"
-                        maxLength={4}
-                        onChangeText={text => handleInput(text, index)}
-                        onKeyPress={({nativeEvent}) => {
-                          if (nativeEvent.key === 'Backspace') {
-                            handleBackspace(index);
-                          }
-                        }}
-                        placeholder="YYYY"
-                        value={val}
-                        ref={ref => {
-                          inputs.current[index] = ref;
-                        }}
-                      />
-                    );
-                  }
+          <View className="w-full space-y-14">
+            <View className="flex-row gap-x-2">
+              {date.map((val, index) => {
+                if (index === 2) {
                   return (
                     <TextInput
                       key={index}
-                      className="px-4 py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700"
+                      className="px-8 py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700"
                       keyboardType="number-pad"
-                      maxLength={2}
+                      maxLength={4}
                       onChangeText={text => handleInput(text, index)}
                       onKeyPress={({nativeEvent}) => {
                         if (nativeEvent.key === 'Backspace') {
                           handleBackspace(index);
                         }
                       }}
-                      placeholder={index === 0 ? 'DD' : 'MM'}
+                      placeholder="YYYY"
+                      placeholderTextColor={'#d1d5db'}
                       value={val}
                       ref={ref => {
                         inputs.current[index] = ref;
                       }}
-                      autoFocus={index === 0}
                     />
                   );
-                })}
-              </View>
+                }
+                return (
+                  <TextInput
+                    key={index}
+                    className="px-4 py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700"
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={text => handleInput(text, index)}
+                    onKeyPress={({nativeEvent}) => {
+                      if (nativeEvent.key === 'Backspace') {
+                        handleBackspace(index);
+                      }
+                    }}
+                    placeholder={index === 0 ? 'DD' : 'MM'}
+                    placeholderTextColor={'#d1d5db'}
+                    value={val}
+                    ref={ref => {
+                      inputs.current[index] = ref;
+                    }}
+                    autoFocus={index === 0}
+                  />
+                );
+              })}
             </View>
           </View>
-
-          {/* Buttons */}
-          <ContinueBtn
-            navigation={navigation}
-            valid={valid}
-            navigateTo="Name"
-            data={{
-              dateOfBirth: new Date(
-                parseInt(date[2]),
-                parseInt(date[1]) - 1,
-                parseInt(date[0]),
-              ).toLocaleDateString('en-GB'),
-            }}
-            alertTitle={`Are you ${calculateAge(date)} years old?`}
-            alertMessage="Please double-check as this cannot be changed later."
-          />
         </View>
+
+        {/* Buttons */}
+        <ContinueBtn
+          navigation={navigation}
+          valid={valid}
+          navigateTo="Name"
+          data={{
+            dateOfBirth: new Date(
+              parseInt(date[2]),
+              parseInt(date[1]) - 1,
+              parseInt(date[0]),
+            ).toLocaleDateString('en-GB'),
+          }}
+          alertTitle={`Are you ${calculateAge(date)} years old?`}
+          alertMessage="Please double-check as this cannot be changed later."
+        />
+      </View>
     </GradientBackground>
   );
 }

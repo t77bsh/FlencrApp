@@ -50,6 +50,7 @@ export default function SocialMediaHandle({navigation}: any) {
                 placeholder={`my_${
                   selectedIndex === 0 ? 'insta' : 'tiktok'
                 }_handle`}
+                placeholderTextColor={'#d1d5db'}
                 leftIcon={{
                   type: 'material',
                   name: 'alternate-email',

@@ -22,6 +22,7 @@ export default function InviteCode({navigation}: any) {
             <View className="flex justify-center items-between">
               <Input
                 placeholder="e.g. 239017"
+                placeholderTextColor={'#d1d5db'}
                 autoFocus
                 keyboardType="number-pad"
                 onChangeText={setInviteCode}

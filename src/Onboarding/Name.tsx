@@ -27,6 +27,7 @@ function Name({navigation}: any) {
                   setValid(text.length > 2);
                 }}
                 placeholder="First name"
+                placeholderTextColor={'#d1d5db'}
                 autoFocus
               />
             </View>
