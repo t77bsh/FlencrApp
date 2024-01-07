@@ -33,11 +33,8 @@ function ContinueBtn({
   const storeDataToUsersProfileData = async (user: FirebaseAuthTypes.User) => {
     try {
       setLoading(true);
-      // Change back to !==
-      if (process.env.NODE_ENV === 'development') {
-        const userRef = firestore().collection('members').doc(user.uid);
-        await userRef.update(data);
-      }
+      const userRef = firestore().collection('members').doc(user.uid);
+      await userRef.update(data);
       navigation.navigate(navigateTo);
       setLoading(false);
     } catch (error: any) {

@@ -139,7 +139,7 @@ function Birthday({navigation}: any) {
                   return (
                     <TextInput
                       key={index}
-                      className="px-8 py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700"
+                      className="py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700 w-36"
                       keyboardType="number-pad"
                       maxLength={4}
                       onChangeText={text => handleInput(text, index)}
@@ -160,7 +160,7 @@ function Birthday({navigation}: any) {
                 return (
                   <TextInput
                     key={index}
-                    className="px-4 py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700"
+                    className="py-4 border-2 border-gray-300 rounded-lg text-center text-2xl font-semibold text-gray-700 w-20"
                     keyboardType="number-pad"
                     maxLength={2}
                     onChangeText={text => handleInput(text, index)}

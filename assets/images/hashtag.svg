@@ -1,0 +1,46 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg503931" viewBox="0 0 1024 768"
+    height="768px" width="1024px" version="1.1">
+    <metadata id="metadata503937">
+        <rdf:rdf>
+            <cc:work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+            </cc:work>
+        </rdf:rdf>
+    </metadata>
+    <defs id="defs503935"></defs>
+    <linearGradient spreadMethod="pad" y2="30%" x2="-10%" y1="120%" x1="30%"
+        id="3d_gradient2-logo-734a0d5f-6c07-4310-b53d-e2e131164588">
+        <stop id="stop503912" stop-opacity="1" stop-color="#ffffff" offset="0%"></stop>
+        <stop id="stop503914" stop-opacity="1" stop-color="#000000" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient gradientTransform="rotate(-30)" spreadMethod="pad" y2="30%" x2="-10%" y1="120%" x1="30%"
+        id="3d_gradient3-logo-734a0d5f-6c07-4310-b53d-e2e131164588">
+        <stop id="stop503917" stop-opacity="1" stop-color="#ffffff" offset="0%"></stop>
+        <stop id="stop503919" stop-opacity="1" stop-color="#cccccc" offset="50%"></stop>
+        <stop id="stop503921" stop-opacity="1" stop-color="#000000" offset="100%"></stop>
+    </linearGradient>
+    <g id="logo-group">
+        <image xlink:href="" id="container" x="272" y="144" width="480" height="480" style="display: none;"
+            transform="translate(0 0)"></image>
+        <g id="logo-center" transform="translate(0 0)">
+            <image xlink:href="" id="icon_container" style="display: none;" x="0" y="0"></image>
+            <g id="slogan"
+                style="font-style:normal;font-weight:100;font-size:32px;line-height:1;font-family:'Exo 2';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+                transform="translate(0 0)"></g>
+            <g id="title"
+                style="font-style:normal;font-weight:normal;font-size:72px;line-height:1;font-family:'Brandmark Script 5';font-variant-ligatures:normal;text-align:center;text-anchor:middle"
+                transform="translate(0 0)">
+                <path id="path503940"
+                    style="font-style:normal;font-weight:normal;font-size:72px;line-height:1;font-family:'Brandmark Script 5';font-variant-ligatures:normal;text-align:center;text-anchor:middle"
+                    d="m 324.08562,-43.992 -5.544,0.144 1.58401,-3.312 c 0.79199,-1.656 0.072,-3.672 -1.58401,-4.536 -1.728,-0.792 -3.744,-0.072 -4.536,1.584 l -3.096,6.408 -5.75999,0.144 1.87199,-3.456 c 0.864,-1.656 0.288,-3.672 -1.368,-4.608 -1.65599,-0.864 -3.744,-0.216 -4.608,1.368 l -3.744,6.912 -7.776,0.216 c -1.872,0 -3.312,1.584 -3.312,3.456 0.072,1.8 1.584,3.312 3.384,3.312 h 0.144 l 3.81601,-0.144 -1.584,3.096 -7.12801,0.216 c -1.87199,0.072 -3.38399,1.656 -3.312,3.528 0.072,1.8 1.584,3.24 3.384,3.24 h 0.144 l 3.096,-0.072 -1.512,2.808 c -0.86399,1.656 -0.288,3.672 1.368,4.608 0.504,0.288 1.08,0.432 1.584,0.432 1.224,0 2.37601,-0.648 3.024,-1.8 l 3.456,-6.336 6.912,-0.288 -7.056,14.616 c -0.792,1.728 -0.072,3.744 1.584,4.536 0.504,0.216 1.008,0.36 1.512,0.36 1.224,0 2.448,-0.72 3.024,-1.944 l 8.568,-17.856 5.472,-0.144 c 1.872,-0.072 3.384,-1.656 3.312,-3.528 -0.072,-1.872 -1.656,-3.312 -3.52799,-3.24 l -1.94401,0.072 1.296,-2.808 9,-0.216 c 1.87201,-0.072 3.38401,-1.656 3.312,-3.528 -0.072,-1.8 -1.584,-3.312 -3.456,-3.24 z m -16.416,7.128 -1.44,2.88 -6.408,0.288 1.584,-2.952 z"
+                    stroke-width="0" stroke-linejoin="miter" stroke-miterlimit="2" fill="#fff" stroke="#fff"
+                    transform="translate(0 279.03304) translate(248.17978583000013 107.26707758) scale(1.14) translate(-281.53115 52.018353)">
+                </path>
+            </g>
+            <image xlink:href="" id="icon" style="display: none;" x="0" y="0"></image>
+        </g>
+    </g>
+</svg>

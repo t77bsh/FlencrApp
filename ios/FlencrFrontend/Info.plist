@@ -27,7 +27,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>app-1-1077902068353-ios-f09ad0b0b160ca41495b80</string>
+				<string>app-1-1077902068353-ios-6397bcfefc00f92d495b80</string>
 			</array>
 		</dict>
 	</array>
@@ -44,8 +44,6 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access is required so you can upload profile photos and find matches!</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
